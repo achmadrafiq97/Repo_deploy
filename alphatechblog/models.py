@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 class Blog(models.Model):
     img_blog = models.CharField(max_length=300)
-    tanggal = models.CharField(max_length=20)
-    comment = models.CharField(max_length=10)
+    tanggal = models.CharField(max_length=20, default="September 23,2018")
+    comment = models.CharField(max_length=10, default="0 Comment")
     judul_blog = models.CharField(max_length=50)
     paragraph_blog = models.CharField(max_length=400)
 

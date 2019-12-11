@@ -1,0 +1,22 @@
+{% extends 'alphatechblog/base.html' %}
+    {% block content %}
+        <div>
+            <form action="{% url 'alphatechblog:konten_blog' %}" method="POST" class="margin-form-blog">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="Judul">Judul</label>
+                    <input type="text" class="form-control" id="Judul" name="Judul" required>
+                </div>
+                <div class="form-group">
+                    <label for="Foto">Foto (link)</label>
+                    <input type="text" class="form-control" id="Foto" name="Foto" required>
+                </div>
+                <div class="form-group">
+                    <label for="Isi Konten">Isi Konten</label>
+                    <input type="text" class="form-control" id="Isi Konten" name="Isi Konten" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    {% endblock %}
+

@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alpha Tech Academy</title>
-    <link rel="stylesheet" href="./../../static/CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="./../../static/CSS/main.css">
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
 </head>
 <body>
     <header>
@@ -23,19 +25,19 @@
                     <div class="header-nav">
                         <ul class="header-nav__list list-unstyled">
                             <li>
-                                <a href="{% url 'alphatechblog:home'%}">Home</a>
+                                <a href="{% url 'alphatechblog:home' %}">Home</a>
                             </li>
                             <li>
-                                <a href="{% url 'alphatechblog:blog'%}">Blog</a>
+                                <a href="{% url 'alphatechblog:blog' %}">Blog</a>
                             </li>
                             <li>
-                                <a href="{% url 'alphatechblog:mentor'%}"">Mentor</a>
+                                <a href="{% url 'alphatechblog:mentor' %}">Mentor</a>
                             </li>
                             <li>
-                                <a href="{% url 'alphatechblog:mentee'%}">Mentee</a>
+                                <a href="{% url 'alphatechblog:mentee' %}">Mentee</a>
                             </li>
                             <li>
-                                <a href="{% url 'alphatechblog:author'%}">Author</a>
+                                <a href="{% url 'alphatechblog:author' %}">Author</a>
                             </li>
                         </ul>
                     </div>
@@ -53,47 +55,17 @@
                                 <img src= "../../static/img/title/alpha-logo.png" class="margin-logo-alphatech" />
                             </div>
                             <div>
-                                <h1 class="experience_title">Alpha Tech Academy</h1>
-                                <p class="margin-paragraph-alphatech">Alpha Tech Academy is a tech talent incubator that gives everyone (even non IT background) a chance to be a professional Tech Talent within 3 months. Contact Person: Email: academy@alphatech.id Mobile phone: 0877 9609 9530</p>
+                                <h1 class="header-alphatech-Blog">Alpha Tech Academy Blog</h1>
+                                <p class="margin-paragraph-alphatech">Alpha Tech Academy is a tech talent incubator that gives everyone (even non IT background) a chance to be a professional Tech Talent within 3 months.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row padding-section-blog">
-                <div>
-                    <img src="../../static/img/author/author.jpg">
-                </div>
-                    <h3>Nama Author</h3>
-                    <p><b>Please Write your Summary,</b> Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet.</p>
-                <div class="col-md-4">
-                    <p>Alamat</p>
-                    <p>Telephone</p>
-                    <p>Education</p>
-                    <p>Profession</p>
-                    <p>Nationality</p>
-                    <p>Company</p>
-                    <p>Email</p>
-                    <p>Address</p>
-                </div>
-                <div class="col-md-8">
-                    <p>: Alamat Author</p>
-                    <p>: Author's Telephone</p>
-                    <p>: Author's Education</p>
-                    <p>: Author's Profession</p>
-                    <p>: Author's Nationality</p>
-                    <p>: Author's Company</p>
-                    <p>: Author's Email</p>
-                    <p>: Author's Address</p>
-                </div>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.314233480313!2d112.60827644979209!3d-7.966441481577961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882865ded0697%3A0xa77fa961a7c4e4b7!2sSepulsa%20Lodge%20Malang!5e0!3m2!1sen!2sid!4v1575988381713!5m2!1sen!2sid" width="500" height="260" frameborder="0" style="border:0;" allowfullscreen="" class="margin-maps"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+        {% block content %}
+        {%endblock%}
+    </div>
     <footer>
         <div class="background-footer-1 container-fluid"> 
             <div class="container align-items-center">
